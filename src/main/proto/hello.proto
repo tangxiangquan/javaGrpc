@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package go.rpc.srv.hello;
+
+service Hello{
+  rpc SayHello(Say) returns (Say);
+}
+
+message Say{
+  string name = 1;
+  int32 list = 2;
+  map<string,string> maps = 3;
+}
